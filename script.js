@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // CIRCULAR MENU
   function openMenu() {
     circularMenu.classList.add('active');
     menuOverlay.classList.add('active');
@@ -121,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
     menuOverlay.addEventListener('click', closeMenu);
   }
 
-  // LOGO вернуться в главное меню
   if (logo) {
     logo.addEventListener('click', () => {
       pages.forEach(page => page.classList.remove('active'));
@@ -130,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // NAVIGATION
   const menuItems = document.querySelectorAll('.menu-btn-item');
 
   function switchPage(targetId) {
@@ -169,7 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // STATS
   function updateStatsDisplay() {
     const minutes = Math.floor(totalMeditationTime / 60);
     const timeEl = document.getElementById('total-meditation-time');
@@ -227,7 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // POPUP
   const popupTrigger = document.getElementById('init-loading-btn');
   const popupText = document.getElementById('home-popup');
 
@@ -236,7 +231,6 @@ document.addEventListener('DOMContentLoaded', function() {
     popupTrigger.addEventListener('mouseleave', () => popupText.classList.remove('show'));
   }
 
-  // ACCORDION
   const accordions = document.querySelectorAll('.accordion');
 
   accordions.forEach(button => {
@@ -261,7 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // BREATHING
   const startBreathingBtn = document.getElementById('start-breathing-btn');
   const stopBreathingBtn = document.getElementById('stop-breathing-btn');
   const breathingSetup = document.getElementById('breathing-setup');
@@ -347,7 +340,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // CAROUSEL
   const track = document.getElementById('carousel-track');
   const slides = track ? track.querySelectorAll('.image-wrapper') : [];
   const dotsContainer = document.getElementById('carousel-dots');
@@ -392,7 +384,6 @@ document.addEventListener('DOMContentLoaded', function() {
   if (nextBtn) nextBtn.addEventListener('click', nextSlide);
   if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
-  // PRACTICE
   const practiceButtons = document.querySelectorAll('.btn-practice-try');
   practiceButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
@@ -407,7 +398,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // FORM
   const leadForm = document.getElementById('lead-form');
   const nameField = document.getElementById('form-name-field');
   const resultBox = document.getElementById('registration-result');
@@ -497,7 +487,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // KEYBOARD
   const globalCircle = document.getElementById('global-circle');
   const footerLog = document.getElementById('global-keyboard-log');
 
