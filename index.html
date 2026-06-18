@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Медитация: Архитектура Разума</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="magic-circle" id="global-circle"></div>
+
+  <!-- MENU OVERLAY -->
+  <div class="menu-overlay" id="menu-overlay"></div>
+  
+  <!-- CIRCULAR MENU -->
+  <div class="circular-menu" id="circular-menu">
+    <div class="menu-circle-item" style="--i: 0; --angle: 0deg;">
+      <button class="menu-btn-item" data-page="page-home">Главная</button>
+    </div>
+    <div class="menu-circle-item" style="--i: 1; --angle: 60deg;">
+      <button class="menu-btn-item" data-page="page-science">Наука</button>
+    </div>
+    <div class="menu-circle-item" style="--i: 2; --angle: 120deg;">
+      <button class="menu-btn-item" data-page="page-practice">Практика</button>
+    </div>
+    <div class="menu-circle-item" style="--i: 3; --angle: 180deg;">
+      <button class="menu-btn-item" data-page="page-breathing">Дыхание</button>
+    </div>
+    <div class="menu-circle-item" style="--i: 4; --angle: 240deg;">
+      <button class="menu-btn-item" data-page="page-inspiration">Вдохновение</button>
+    </div>
+    <div class="menu-circle-item" style="--i: 5; --angle: 300deg;">
+      <button class="menu-btn-item" data-page="page-register">Запись</button>
+    </div>
+    <div class="menu-center" id="menu-center">✕</div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="main-header" id="main-header">
+    <div class="logo">MEDITATION</div>
+    <nav class="nav-links" id="main-nav">
+      <button id="menu-btn" class="nav-btn menu-btn" style="display: none;">Меню</button>
+      <button id="theme-toggle" class="nav-btn theme-btn">Луна</button>
+      <button id="stats-btn" class="nav-btn stats-btn">Статистика</button>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content-wrapper">
+
+    <!-- HOME -->
+    <section id="page-home" class="page-section active">
+      <div class="hero hero-story">
+        <h1>Вернись<br><span class="highlight">к истокам</span></h1>
+        
+        <div class="story-text">
+          <p>Мы живем в эпоху информационной сингулярности. Наш мозг ежедневно обрабатывает гигабайты данных, находясь в состоянии перманентного фонового стресса. В мире бесконечного шума <strong>тишина стала главной привилегией</strong>.</p>
+          
+          <p>Медитация сегодня — это не уход от реальности в тибетские горы. Это прагматичный инструмент. Это способ переписать прошивку своей нервной системы, выключить автопилот тревоги и вернуть себе контроль над собственным вниманием.</p>
+          
+          <p>Представь, что ты можешь замедлить время, приглушить внешний хаос и наконец-то услышать собственные мысли. Это не магия. Это нейробиология. И это первый шаг к абсолютному фокусу.</p>
+        </div>
+
+        <p class="hint">Системное сообщение: Нажми <kbd>Enter</kbd> для активации фокуса, <kbd>Esc</kbd> — для отмены.</p>
+        
+        <div class="popup-wrapper">
+          <button class="btn-primary" id="init-loading-btn">Приступить</button>
+          <span class="popup-text" id="home-popup">Вы готовы к обновлению вашей нейросети...</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENCE -->
+    <section id="page-science" class="page-section">
+      <div class="section-bg-image" style="background-image: url('/siteaboutmeditation/images/wallpaper.jpg'); opacity: 0.1;"></div>
+      <h2>Нейробиология</h2>
+      <p class="section-subtitle">Почему медитации это для всех</p>
+
+      <div class="story-text text-center">
+        <p>Медитация — это люкс, первая необходимость в мире, где внимание - главное оружие. За 8 недель регулярной практики ваш мозг <strong>физически меняет свою структуру</strong>. Вот что говорит наука.</p>
+      </div>
+
+      <div class="science-intro">
+        <h3>История медитации: от монастырей до наших дней</h3>
+        <p>о Практика восходит к древним индийским традициям (1500 лет до н.э.), потом распространилась через буддизм, даосизм и суфизм. А в 1970-х годах на кафедре Массачусетского университета учёный <strong>Джон Кабат-Зинн</strong> создал "<strong>Mindfulness-Based Stress Reduction</strong>" (MBSR) — научный протокол медитации для госпиталей. Теперь это стандарт в США.</p>
+      </div>
+
+      <div class="accordion-container" id="science-accordion">
+        <button class="accordion">Нейропластичность: Перепрошивка железа</button>
+        <div class="panel">
+          <p>Мозг — это не застывший бетон, а пластилин. Практика осознанности увеличивает плотность серого вещества в <strong>гиппокампе</strong> (на 5% за 8 недель по исследованию Гарварда). Это ваш жесткий диск памяти, обучения и хладнокровия в стрессе.</p>
+          <p style="margin-top: 10px;"><strong>Научный факт:</strong> медитирующие люди показывают на 23% меньше активности в миндалевидном теле (центр паники) при виде угрожающих образов. А префронтальная кора (логика, воля) увеличивает размер на 8%.</p>
+        </div>
+
+        <button class="accordion">Амигдала: Отключение центра паники</button>
+        <div class="panel">
+          <p>Миндалевидное тело (амигдала) — встроенная сирена, которая кричит при стрессе. Медитация буквально уменьшает её в размерах (до 5% за 8 недель). Вы перестаете реагировать на дедлайны как на смертельную угрозу.</p>
+          <p style="margin-top: 10px;"><strong>Практический результат:</strong> медитирующий менеджер останется спокоен при падении акций. Его кортизол (гормон стресса) упадет на 28% по сравнению с контрольной группой.</p>
+        </div>
+
+        <button class="accordion">Дефолт-система мозга: Остановка мыслемешалки</button>
+        <div class="panel">
+          <p>Default Mode Network (DMN) — сеть активности мозга, которая включается, когда вы ничего не делаете. Именно она создает пиццу из переживаний, сожалений и страхов о будущем. Медитация снижает её активность на 60%.</p>
+          <p style="margin-top: 10px;"><strong>Что это значит?</strong> Нет больше этого "белья" в голове перед сном. Вместо этого — чистота и присутствие "здесь и сейчас".</p>
+        </div>
+
+        <button class="accordion">Зачем офисному клерку медитация? Практический апгрейд</button>
+        <div class="panel">
+          <p><strong>Проблема:</strong> офисный работник попадает в замкнутый цикл: стресс → кортизол → бессонница → усталость → еще больше стресса. Результат: выгорание за 5 лет.</p>
+          <p style="margin-top: 10px;"><strong>Решение медитации:</strong></p>
+          <ul style="margin-top: 10px; margin-left: 20px; color: #94a3b8; list-style-type: disc;">
+            <li>Восстановление энергии: 20 минут медитации = 4 часа качественного отдыха</li>
+            <li>Фокус и продуктивность: увеличение концентрации на 31%</li>
+            <li>Здоровье: снижение давления, улучшение иммунитета</li>
+            <li>Креативность: повышение решения нестандартных задач на 40%</li>
+          </ul>
+        </div>
+
+        <button class="accordion">Почему медитация пробуждает внутреннюю красоту? Наука эмпатии</button>
+        <div class="panel">
+          <p>Когда вы медитируете, активируется <strong>островок Рейля</strong> (область эмоциональной осознанности) и <strong>передняя поясная извилина</strong> (сочувствие). Это буквально переписывает вашу способность любить и понимать.</p>
+          <p style="margin-top: 10px;"><strong>Эффект на личность:</strong></p>
+          <ul style="margin-top: 10px; margin-left: 20px; color: #94a3b8; list-style-type: disc;">
+            <li>Люди становятся спокойнее и менее реактивны (меньше агрессии)</li>
+            <li>Растет способность к сочувствию</li>
+            <li>Улучшается самоанализ — вы видите свои паттерны поведения</li>
+            <li>Исчезает суета и спешка — вместо них приходит органичная расслабленность</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PRACTICE -->
+    <section id="page-practice" class="page-section">
+      <div class="section-bg-image" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&h=300&fit=crop'); opacity: 0.1;"></div>
+      <h2>Практика медитации</h2>
+      <p class="section-subtitle">Суть: Вы – не ваши Мысли. Мысли вам не принадлежат.</p>
+
+      <div class="practice-intro">
+        <p class="intro-text">Медитации бывают разных видов, но разберем некоторые основные, которые стреляют в самую суть. <strong>Я рекомендую попробовать каждый в течении трех дней ежедневно.</strong> Вы сами поймете, что вам будет удаваться легче, где-то вы сами будете все между собой комбинировать. Просто доверьтесь этому новому опыту. <strong>У вас всё получится.</strong></p>
+        
+        <div class="warning-box">
+          <p><strong>ВАЖНО И ОБЯЗАТЕЛЬНО:</strong> не медитируйте ради галочки! Применяйте это состояние в обычной жизни. После медитации — не старайтесь заново втянуться в привычный уклад ума. <strong>Продолжайте медитировать в обычной жизни — без усилий.</strong> Позже пик эффекта будет длиться 4-6 часов. Это именно то, за чем мы сюда пришли.</p>
+        </div>
+
+        <div class="trap-info">
+          <p>В каждой медитации я приведу <strong>популярные ловушки</strong> — моменты, когда кажется, что вы медитируете, но вы по-прежнему играете в игры Эго. <strong>Пугаться их не надо</strong> — они бывают в начале пути. Помните: <strong>любое мышление — это привычка, а привычку можно изменить. Все нормально.</strong></p>
+        </div>
+      </div>
+
+      <div class="meditation-card">
+        <div class="med-header">
+          <h3>I. Наблюдение: Вы — зритель, мысли — актеры</h3>
+          <span class="med-duration">15-20 минут</span>
+        </div>
+        <div class="med-mechanics">
+          <p><strong>Механизм:</strong></p>
+          <p>Закройте глаза. Дышите свободно, медленно. Наблюдайте за своими мыслями. Вне зависимости от того, что это за мысль — <strong>не комментируйте её, не цепляйтесь за неё, не оценивайте её.</strong> Просто отпустите. Не связывайте Себя и Мысль. Есть только Вы. Без мыслей.</p>
+        </div>
+        <div class="med-trap">
+          <p><strong>Ловушка эго:</strong> Отпустите попытки отпустить. Вам не нужно отпускать то, что вам не принадлежит.</p>
+        </div>
+        <button class="btn-practice-try">Попробовать</button>
+      </div>
+
+      <div class="meditation-card">
+        <div class="med-header">
+          <h3>II. Доверие: Отдайте контроль бессознательному</h3>
+          <span class="med-duration">15-20 минут</span>
+        </div>
+        <div class="med-mechanics">
+          <p><strong>Механизм:</strong></p>
+          <p>Закройте глаза. Дышите свободно, медленно. Доверьте все мысли, заботы, переживания Богу/бессознательному/Миру. <strong>Всё само о себе позаботится.</strong></p>
+        </div>
+        <div class="med-trap">
+          <p><strong>Ловушка эго:</strong> Вы переживаете о том, что не можете довериться? Это нормально. Продолжайте интуитивно доверять.</p>
+        </div>
+        <button class="btn-practice-try">Попробовать</button>
+      </div>
+
+      <div class="meditation-card">
+        <div class="med-header">
+          <h3>III. Кошки-мышки: Парадокс предсказания мысли</h3>
+          <span class="med-duration">10-15 минут</span>
+        </div>
+        <div class="med-mechanics">
+          <p><strong>Механизм:</strong></p>
+          <p>Закройте глаза. Спросите себя: <strong>"Какая будет моя следующая мысль?"</strong> и отслеживайте. Попробуйте предсказать мысль, которая следующей придет в вашу голову.</p>
+        </div>
+        <div class="med-trap">
+          <p><strong>Ловушка эго:</strong> Попытка контроля — это сама ловушка. Смиритесь с парадоксом.</p>
+        </div>
+        <button class="btn-practice-try">Попробовать</button>
+      </div>
+
+      <div class="meditation-card">
+        <div class="med-header">
+          <h3>IV. Молчание: Когда нечего больше делать</h3>
+          <span class="med-duration">20-30 минут</span>
+        </div>
+        <div class="med-mechanics">
+          <p><strong>Механизм:</strong></p>
+          <p>Закройте глаза. Сидите. Ничего не делайте. Это финальная стадия медитации — когда ум успокаивается настолько, что медитация случается сама по себе.</p>
+        </div>
+        <div class="med-trap">
+          <p><strong>Ловушка эго:</strong> Ничегонеделание — это уже достаточно. Это и есть вершина.</p>
+        </div>
+        <button class="btn-practice-try">Попробовать</button>
+      </div>
+    </section>
+
+    <!-- BREATHING -->
+    <section id="page-breathing" class="page-section">
+      <div class="section-bg-image" style="background-image: url('https://images.unsplash.com/photo-1564432842641-cdad3b4dbf97?w=1200&h=300&fit=crop'); opacity: 0.1;"></div>
+      <h2>Дыхание</h2>
+      <p class="section-subtitle">Протокол 4-4-4-4: Вдох — Задержка — Выдох — Задержка</p>
+
+      <div class="breathing-cabinet">
+        <div class="breathing-settings" id="breathing-setup">
+          <div class="input-group">
+            <label>Количество циклов (1 цикл = 16 сек):</label>
+            <input type="number" id="breathing-cycles" value="4" min="1" max="20">
+          </div>
+          <button id="start-breathing-btn" class="btn-submit">Запуск протокола</button>
+        </div>
+
+        <div class="breathing-sandbox" id="breathing-sandbox" style="display: none;">
+          <div class="status-badge" id="breathing-status">Синхронизация...</div>
+          <div class="timer-badge">Осталось циклов: <span id="cycles-left">0</span></div>
+          
+          <div class="breathing-sphere-wrapper">
+            <div class="breathing-sphere" id="breathing-shape"></div>
+          </div>
+
+          <button id="stop-breathing-btn" class="btn-reset">Остановка</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSPIRATION -->
+    <section id="page-inspiration" class="page-section">
+      <div class="section-bg-image" style="background-image: url(''); opacity: 0.1;"></div>
+      <h2>Медитирующие звезды</h2>
+      <p class="section-subtitle">Секретное оружие талантов, творцов и чемпионов</p>
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+          <div class="image-wrapper">
+            <div class="inspire-card-carousel">
+              <div class="card-image" style="background-image: url('/siteaboutmeditation/images/jons.jpg');"></div>
+              <h3>Стив Джобс</h3>
+              <p class="role">Основатель Apple</p>
+              <p class="desc">Джобс практиковал дзен-буддизм годами. Именно медитация научила его отсекать всё лишнее, слушать интуицию и создала тот самый легендарный дизайн продуктов Apple.</p>
+            </div>
+          </div>
+
+          <div class="image-wrapper">
+            <div class="inspire-card-carousel">
+              <div class="card-image" style="background-image: url('/siteaboutmeditation/images/kobe.jpg');"></div>
+              <h3>Коби Брайант</h3>
+              <p class="role">Легенда баскетбола</p>
+              <p class="desc">Его знаменитая "Mamba Mentality" строилась на ежедневной практике отключения мыслей. Медитация позволяла ему входить в состояние абсолютного потока на паркете.</p>
+            </div>
+          </div>
+
+          <div class="image-wrapper">
+            <div class="inspire-card-carousel">
+              <div class="card-image" style="background-image: url('/siteaboutmeditation/images/fincher.jpg');"></div>
+              <h3>Дэвид Линч</h3>
+              <p class="role">Культовый кинорежиссер</p>
+              <p class="desc">«Идеи подобны рыбам. Если хотите поймать мелкую рыбешку — оставайтесь на мелководье». Трансцендентальная медитация стала для него источником креатива.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn prev">←</button>
+        <button class="carousel-btn next">→</button>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- REGISTER -->
+    <section id="page-register" class="page-section">
+      <div class="section-bg-image" style="background-image: url('/siteaboutmeditation/images/wallpaper.jpg'); opacity: 0.1;"></div>
+      <h2>Заявка на закрытый поток</h2>
+      <p class="section-subtitle">Заполни форму для получения доступа к приватной информации</p>
+
+      <form id="lead-form" class="styled-form">
+        <div class="input-group">
+          <label>Идентификатор (Имя):</label>
+          <input type="text" name="userName" id="form-name-field" placeholder="Neo" required>
+          <span class="error-msg">Имя должно быть длиннее 2-х символов!</span>
+        </div>
+
+        <div class="input-group">
+          <label>Канал связи (Email):</label>
+          <input type="email" name="userEmail" placeholder="neo@matrix.com" required>
+          <span class="error-msg">Некорректный E-mail адрес!</span>
+        </div>
+
+        <div class="input-group">
+          <label>Текущий уровень прошивки:</label>
+          <select name="userLevel">
+            <option value="beginner">Базовый (Только начинаю)</option>
+            <option value="middle">Продвинутый (Знаком с тишиной)</option>
+            <option value="pro">Root-доступ (Ежедневная практика)</option>
+          </select>
+        </div>
+
+        <div class="buttons-grid">
+          <button type="submit" class="btn-submit">Отправить данные</button>
+          <button type="reset" class="btn-reset">Сбросить</button>
+        </div>
+      </form>
+
+      <div class="form-result-box" id="registration-result"></div>
+    </section>
+
+  </main>
+
+  <!-- STATS MODAL -->
+  <div class="stats-modal" id="stats-modal">
+    <div class="stats-modal-content">
+      <button class="close-modal" id="close-stats-modal">X</button>
+      <h2>Ваша статистика</h2>
+      <div class="stats-body">
+        <div class="stat-item">
+          <span class="stat-label">Всего медитировано:</span>
+          <span class="stat-value" id="total-meditation-time">0 мин</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Сеансов проведено:</span>
+          <span class="stat-value" id="total-sessions">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Уровень прошивки:</span>
+          <span class="stat-value" id="user-level">-</span>
+        </div>
+        <button id="clear-stats-btn" class="btn-reset" style="margin-top: 20px; width: 100%;">Очистить статистику</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div id="global-keyboard-log">Терминал логов: ожидание ввода...</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
